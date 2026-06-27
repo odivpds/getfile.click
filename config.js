@@ -7,5 +7,5 @@ const CONFIG = {
     API_BASE_URL: 'https://api.getfiles.my.id',
 
     // URL Direct Link Pop-under Milik Client (Monetag, dsb)
-    CLIENT_POPUNDER_URL: 'https://www.google.com/search?q=iklan-popunder-client'
+    CLIENT_POPUNDER_URL: '/'
 };
