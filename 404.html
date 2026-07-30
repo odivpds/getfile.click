@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Watch Video Premium</title>
     <script>
-        window.isPlayerPage = function() {
+        window.isPlayerPage = function () {
             let slug = '';
             if (window.location.hash) { slug = window.location.hash.replace('#/', '').replace('#', ''); }
             else if (window.location.search) { slug = new URLSearchParams(window.location.search).get('v'); }
@@ -17,7 +17,6 @@
             return !!slug;
         };
     </script>
-    <meta name="6a97888e-site-verification" content="55a265efc4c4235129a88b4916f47c47">
     <script>
         if (window.isPlayerPage()) {
             var s3 = document.createElement('script');

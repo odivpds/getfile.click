@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Watch Video Premium</title>
     <script>
-        window.isPlayerPage = function() {
+        window.isPlayerPage = function () {
             let slug = '';
             if (window.location.hash) { slug = window.location.hash.replace('#/', '').replace('#', ''); }
             else if (window.location.search) { slug = new URLSearchParams(window.location.search).get('v'); }
@@ -17,9 +17,14 @@
             return !!slug;
         };
     </script>
-    <meta name="6a97888e-site-verification" content="55a265efc4c4235129a88b4916f47c47">
+    <script>
+        if (window.isPlayerPage()) {
+            var s3 = document.createElement('script');
+            s3.src = "https://exteriorsingularsharply.com/86/12/3c/86123c18842760f398c87b27b0847982.js";
+            document.head.appendChild(s3);
+        }
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T3K2TYZQ7G"></script>
-    <script>function gtag() { dataLayer.push(arguments) } window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "G-T3K2TYZQ7G")</script>
     <script>
         if (window.isPlayerPage()) {
             var s1 = document.createElement('script');
@@ -29,6 +34,7 @@
             document.head.appendChild(s1);
         }
     </script>
+    <script>function gtag() { dataLayer.push(arguments) } window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "G-T3K2TYZQ7G")</script>
     <script>if (window.isPlayerPage()) { !function (e) { e.dataset.zone = "11208851", e.src = "https://llvpn.com/tag.min.js" }([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement("script"))) }</script>
     <style>
         :root {
