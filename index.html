@@ -454,150 +454,6 @@
             color: #8b949e;
             font-size: .9rem
         }
-
-        .search-container {
-            display: flex;
-            align-items: center;
-            background: rgba(255, 255, 255, .05);
-            border: 1px solid rgba(255, 255, 255, .1);
-            border-radius: 20px;
-            padding: 5px 15px;
-            margin-left: auto;
-            width: 100%;
-            max-width: 300px;
-        }
-
-        .search-container input {
-            background: transparent;
-            border: none;
-            color: #fff;
-            outline: none;
-            width: 100%;
-            padding: 5px;
-            font-size: 0.9rem;
-        }
-
-        .search-container button {
-            background: transparent;
-            border: none;
-            color: #8b949e;
-            cursor: pointer;
-            padding: 5px;
-        }
-
-        .search-container button:hover {
-            color: #fff;
-        }
-
-        .content-section {
-            width: 100%;
-            max-width: 1000px;
-            padding: 0 20px 60px;
-            margin: 0 auto;
-        }
-        
-        .content-section h2 {
-            font-size: 2rem;
-            color: #fff;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 20px;
-        }
-        
-        .video-card {
-            background-color: rgba(255, 255, 255, .03);
-            border: 1px solid rgba(255, 255, 255, .05);
-            border-radius: 12px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .video-card-thumb {
-            width: 100%;
-            aspect-ratio: 16/9;
-            background-color: #1a1e23;
-            position: relative;
-        }
-        
-        .video-card-thumb::before {
-            content: '▶';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: rgba(255,255,255,0.5);
-            font-size: 2rem;
-        }
-
-        .video-card-info {
-            padding: 15px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .video-card-title {
-            color: #fff;
-            font-size: 1rem;
-            margin: 0 0 10px 0;
-            line-height: 1.4;
-        }
-
-        .video-card-actions {
-            display: flex;
-            gap: 10px;
-            margin-top: auto;
-        }
-        
-        .btn-sm {
-            padding: 6px 12px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            text-decoration: none;
-            text-align: center;
-            flex: 1;
-            font-weight: 600;
-        }
-        
-        .btn-watch {
-            background: #7b61ff;
-            color: white;
-        }
-        
-        .btn-download {
-            background: rgba(255,255,255,0.1);
-            color: white;
-        }
-
-        .site-footer {
-            width: 100%;
-            padding: 40px 20px;
-            background-color: #090d13;
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            margin-top: auto;
-        }
-        
-        .site-footer p {
-            color: #8b949e;
-            font-size: 0.9rem;
-            margin: 5px 0;
-        }
-        
-        .site-footer a {
-            color: #7b61ff;
-            text-decoration: none;
-        }
-        
-        .site-footer a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 
@@ -609,10 +465,6 @@
                         d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
                         clip-rule="evenodd" />
                 </svg> <span>GetFiles</span></div>
-            <div class="search-container">
-                <input type="text" placeholder="Search videos...">
-                <button type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg></button>
-            </div>
         </nav>
         <header class="hero">
             <h1 class="gradient-text">Welcome to GetFiles</h1>
@@ -652,30 +504,6 @@
                 </div>
             </div>
         </section>
-        <section class="content-section">
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 30px;">
-                <h2 style="margin-bottom:0;">Trending Videos</h2>
-                <button id="shuffle-btn" class="btn-primary" style="padding: 8px 16px; font-size: 0.9rem; cursor:pointer;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: text-bottom; margin-right: 5px;">
-                      <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.827 10.99 11.202 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.173 5.01 2.798 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
-                      <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
-                    </svg>
-                    Shuffle
-                </button>
-            </div>
-            <div class="video-grid" id="landing-video-grid">
-                <!-- Videos will be populated by JS -->
-            </div>
-        </section>
-        <footer class="site-footer">
-            <p>&copy; 2024 GetFiles Premium Streaming. All rights reserved.</p>
-            <p>
-                <a href="#">Privacy Policy</a> | 
-                <a href="#">Terms of Service</a> | 
-                <a href="#">DMCA</a>
-            </p>
-            <p>Contact us: support@videyxz.xyz</p>
-        </footer>
     </div>
     <div id="player-page" class="main-layout" style="display:none">
         <div class="container">
@@ -716,71 +544,6 @@
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script src="config.js"></script>
     <script src="app.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            if (!window.isPlayerPage()) {
-                const videoGrid = document.getElementById('landing-video-grid');
-                
-                const fetchLandingVideos = async (seed) => {
-                    try {
-                        videoGrid.innerHTML = '<p style="color:#8b949e;text-align:center;grid-column:1/-1;">Loading trending videos...</p>';
-                        const url = `${CONFIG.API_BASE_URL}/api/videos?page=1&limit=8&seed=${seed}`;
-                        const response = await fetch(url);
-                        if (!response.ok) throw new Error("API response error");
-                        const data = await response.json();
-                        
-                        if (data && data.data && data.data.length > 0) {
-                            videoGrid.innerHTML = '';
-                            data.data.forEach(video => {
-                                let thumbUrl = `${CONFIG.API_BASE_URL}/api/video/${video.slug}/thumbnail`;
-                                if (video.storage_type === 'bunny') {
-                                    thumbUrl = `https://${CONFIG.BUNNY_PULL_ZONE_URL}/${video.bunny_id}/thumbnail.jpg`;
-                                } else if (video.storage_type === 'r2') {
-                                    thumbUrl = `https://${CONFIG.R2_PUBLIC_URL}/${video.bunny_id}/thumbnail.jpg`;
-                                }
-                                
-                                const videoUrl = `?v=${video.slug}`;
-                                
-                                const cardHTML = `
-                                <div class="video-card">
-                                    <a href="${videoUrl}" style="text-decoration:none;">
-                                        <div class="video-card-thumb" style="background-image: url('${thumbUrl}'); background-size: cover; background-position: center;"></div>
-                                    </a>
-                                    <div class="video-card-info">
-                                        <h3 class="video-card-title">${video.title}</h3>
-                                        <div class="video-card-actions">
-                                            <a href="${videoUrl}" class="btn-sm btn-watch">Watch Now</a>
-                                            <a href="${videoUrl}" class="btn-sm btn-download">Download</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                `;
-                                videoGrid.insertAdjacentHTML('beforeend', cardHTML);
-                            });
-                        } else {
-                            videoGrid.innerHTML = '<p style="color:#8b949e;text-align:center;grid-column:1/-1;">No videos found.</p>';
-                        }
-                    } catch (e) {
-                        console.error("Error loading landing videos:", e);
-                        videoGrid.innerHTML = '<p style="color:red;text-align:center;grid-column:1/-1;">Failed to load videos.</p>';
-                    }
-                };
-                
-                // Initial fetch
-                let currentSeed = Math.floor(Math.random() * 1000000);
-                fetchLandingVideos(currentSeed);
-                
-                // Shuffle button
-                const shuffleBtn = document.getElementById('shuffle-btn');
-                if (shuffleBtn) {
-                    shuffleBtn.addEventListener('click', () => {
-                        currentSeed = Math.floor(Math.random() * 1000000);
-                        fetchLandingVideos(currentSeed);
-                    });
-                }
-            }
-        });
-    </script>
 </body>
 
 </html>
